@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.html": "html",
+        "DDA.C": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
