@@ -42,6 +42,7 @@ public class TypingSpeedCalculator {
     private void displaySampleText() {
         System.out.println("Type the following text and press Enter when done (or after 30 seconds):");
         System.out.println(sampleText);
+        System.out.println("");
     }
 
     // Method to capture user input with a 30-second time limit
@@ -54,6 +55,7 @@ public class TypingSpeedCalculator {
             @Override
             public void run() {
                 timeUp = true;  // Set the flag when time is up
+                 System.out.println("");
                 System.out.println("\nTime's up!"); // Notify the user
                 scanner.close(); // Close the scanner
             }
@@ -108,7 +110,7 @@ public class TypingSpeedCalculator {
     // Method to display the results
     private void displayResults(double timeTaken, double typingSpeed, double accuracy) {
         int wordsTyped = userInput.trim().isEmpty() ? 0 : userInput.split("\\s+").length;
-
+        System.out.println("--------------------------------------------------------------");
         System.out.printf("You typed %d words in %.2f seconds.%n", wordsTyped, timeTaken);
         System.out.printf("Your typing speed is %.2f words per minute.%n", typingSpeed);
         System.out.printf("Your accuracy is %.2f%%%n", accuracy);
